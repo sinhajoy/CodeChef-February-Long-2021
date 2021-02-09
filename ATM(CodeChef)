@@ -1,0 +1,16 @@
+try:
+    v=input()
+    a=v.split()
+
+    withdaw=float(a[0])
+    bal=float(a[1])
+    if (bal+0.50>=withdaw and withdaw%5==0):
+        j=bal-withdaw-0.50
+        print("%.2f" % j)
+    else:
+        print(bal)  
+        
+        
+except:
+    pass
+
