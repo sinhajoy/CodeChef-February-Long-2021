@@ -1,13 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 10 13:58:08 2021
-
-@author: joysi
-"""
-
-a=input()
-
-if(len(a)>=10):
-    print("Yes")
+import re
+pattern = "^.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$"
+password = input("Enter string to test: ")
+result = re.findall(pattern, password)
+if (result):
+    print ("Valid password")
 else:
-    print('No')
+    print ("Password not valid")
